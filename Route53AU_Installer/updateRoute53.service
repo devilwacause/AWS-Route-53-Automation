@@ -1,0 +1,13 @@
+[Unit]
+Description=Update Route53 DNS for ergdev.red
+Wants=network-online.target
+After=network.target
+
+[Service]
+ExecStart=/etc/SubdomainAutomation/script.sh
+
+StandardOutput=append:/var/log/custom_script_logs/Route53Update.log
+StandardError=append:/var/log/custom_script_logs/Route53Update_error.log
+
+[Install]
+WantedBy=multi-user.target
