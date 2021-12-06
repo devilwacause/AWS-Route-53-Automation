@@ -253,20 +253,11 @@ start_new_creation() {
 				if [[ ${#Vhosts[@]} == 0 ]]; then 
 					echo -e "${YELLOW}No VHOST's found that can be assigned for the Route 53 Update process.  No VHOSTS available, or all already created.${CRESET}"
 					exit
-				else
-					echo -e "################\n"
-					for((i=0;i<${#Vhosts[@]};i++))
-					do
-						echo -e "$(expr $i + 1).)" "${Vhosts[$i]} \n"
-					done
-					echo -e "$(expr ${#Vhosts[@]} + 1).) Cancel \n"
-					echo "################"
-					echo
-					echo -e "${YELLOW}Which VHOST will be used? ( 1 - $(expr ${#Vhosts[@]} + 1) ) ${CRESET}"
 				fi
 			fi
 		done
-
+		SnC="$(new_creation_menu)"
+		echo "$SnC"
 	elif command -v apache2ctl &>/dev/null 
 	then
 		cmd_results=$( apache2ctl -t -D DUMP_VHOSTS | grep 'namevhost' | grep "$selectedHostedZoneN" | awk '{print $4}')
