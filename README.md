@@ -1,7 +1,8 @@
 # AWS-Route-53-Automation
 AWS Route 53 A Record Automation with Changing IP
 
-INFORMATION
+INFORMATION:
+
 AWS changes your IP address for non Elastic IP bound EC2 instances upon restart.  When dealing with development resources that you've assigned a test domain to thru Route 53, 
 you have to update the Route 53 record for the domain to reference the newly assigned public IPv4 address.  This can make cost saving measures such as turning off your development
 server during night / weekends an extra chore as the domain must be updated whenever the system is started the following day / weekday.
