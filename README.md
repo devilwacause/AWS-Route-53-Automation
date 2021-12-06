@@ -29,7 +29,11 @@ Software:
   
   JQ - Shell Based JSON manipulation.  sudo apt-get install jq (Ubuntu)
   
+AWS REQUIREMENTS:
 
+IAM User with sufficient permissions to modify Route 53 hosted zone records.  
+
+Highly recommend that user is limited to only Route53, and that you use the principle of least privilege.
 
 
 
