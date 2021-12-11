@@ -1,5 +1,5 @@
 {
-    "Comment": "Update record to reflect new IP Address of StopGapDEV",
+    "Comment": "Update record to reflect new IP Address of server",
     "Changes": [
 	{
 	    "Action": "UPSERT",
