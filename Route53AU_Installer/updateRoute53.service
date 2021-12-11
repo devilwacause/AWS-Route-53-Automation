@@ -1,5 +1,5 @@
 [Unit]
-Description=Update Route53 DNS for ergdev.red
+Description=Update Route53 DNS
 Wants=network-online.target
 After=network.target
 
